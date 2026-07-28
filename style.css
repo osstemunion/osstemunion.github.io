@@ -167,21 +167,25 @@ header::before{
 
 }
 
-.signature{
-
-    margin-top:45px;
+    margin-top:35px;      /* 위 여백 조금 줄임 */
 
     text-align:right;
 
     color:#666;
 
-    line-height:1.8;
+    font-size:14px;       /* 전체 글씨 작게 */
+
+    line-height:1.6;
 
 }
 
 .signature strong{
 
-    color:#005BAA;
+    color:#222;           /* 검은색 */
+
+    font-weight:bold;
+
+    font-size:15px;       /* 설립대표만 살짝 크게 */
 
 }
 
