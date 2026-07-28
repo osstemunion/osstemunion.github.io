@@ -185,10 +185,11 @@ header::before{
 
 .message-highlight{
     margin-top:30px;
-    font-size:20px;
-    font-weight:bold;
-    color:#9a6700;
     text-align:center;
+    font-size:20px;
+    font-weight:700;
+    color:#9a6700;
+    line-height:1.7;
 }
 
 .signature strong{
@@ -215,6 +216,10 @@ header::before{
 
     line-height:1.9;
 
+}
+
+.message-highlight{
+    font-size:17px;
 }
 
 }
