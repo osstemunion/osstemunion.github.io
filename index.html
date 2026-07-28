@@ -28,6 +28,52 @@ header{
     text-align:center;
     padding:70px 20px;
 }
+.hero{
+    max-width:900px;
+    margin:auto;
+}
+
+.subtitle{
+    font-size:22px;
+    margin:25px 0;
+    line-height:1.8;
+    opacity:.95;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.hero-btn{
+    text-decoration:none;
+    padding:16px 35px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.join{
+    background:white;
+    color:#005BAA;
+}
+
+.join:hover{
+    transform:translateY(-3px);
+}
+
+.consult{
+    border:2px solid white;
+    color:white;
+}
+
+.consult:hover{
+    background:white;
+    color:#005BAA;
+}
 
 header h1{
     font-size:42px;
@@ -128,9 +174,28 @@ header p{
 
 <header>
 
-<h1>오스템임플란트 노동조합</h1>
+<div class="hero">
 
-<p>함께 만드는 더 나은 일터</p>
+<h1>🤝 오스템임플란트 노동조합</h1>
+
+<p class="subtitle">
+혼자가 아닌 함께,<br>
+더 나은 일터를 만들어갑니다.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="hero-btn join">
+노조 가입하기
+</a>
+
+<a href="#" class="hero-btn consult">
+노동 상담
+</a>
+
+</div>
+
+</div>
 
 </header>
 
