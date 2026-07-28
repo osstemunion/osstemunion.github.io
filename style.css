@@ -475,11 +475,15 @@ header h1{
 /* 제목 */
 
 .section h2{
-    font-size:21px;
+    font-size:20px;
     line-height:1.4;
     text-align:center;
 }
 
+.message-section h2{
+    font-size:18px;
+}
+   
 /* 인사말 */
 
 .message-section{
