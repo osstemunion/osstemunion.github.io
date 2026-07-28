@@ -126,6 +126,84 @@ header::before{
 }
 
 /* =======================
+      인사말
+======================= */
+
+.message-section{
+
+    background:#f8f9fb;
+
+    border-radius:22px;
+
+    padding:50px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.message-section h2{
+
+    color:#005BAA;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.message-box{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#444;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+.signature{
+
+    margin-top:45px;
+
+    text-align:right;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.signature strong{
+
+    color:#005BAA;
+
+}
+
+@media(max-width:768px){
+
+.message-section{
+
+    padding:30px 22px;
+
+}
+
+.message-box{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+}
+
+/* =======================
       전체 영역
 ======================= */
 
