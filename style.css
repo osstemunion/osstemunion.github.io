@@ -666,3 +666,136 @@ header h1{
 }
 
 }
+
+/* ======================
+   조직도 페이지
+====================== */
+
+
+.organization-image{
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+
+.organization-image img{
+
+    width:100%;
+
+    max-width:1100px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.role-box{
+
+    margin-top:50px;
+
+}
+
+
+.role-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.role-card{
+
+    background:#f8fbff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+.role-card h3{
+
+    color:#005BAA;
+
+    margin-bottom:15px;
+
+}
+
+
+.role-card p{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+
+.back-btn{
+
+    display:block;
+
+    width:250px;
+
+    margin:40px auto 0;
+
+    padding:15px;
+
+    text-align:center;
+
+    background:#005BAA;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.organization-image img{
+
+    border-radius:12px;
+
+}
+
+
+
+.role-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.role-card{
+
+    padding:18px 10px;
+
+}
+
+
+}
