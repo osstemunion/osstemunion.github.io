@@ -437,80 +437,103 @@ footer{
 
 }
 
-/* =======================
+/* =========================
       모바일
-======================= */
+========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 header{
-
-    padding:60px 20px;
-
+    padding:50px 20px;
 }
 
-.hero h1{
-
+header h1{
     font-size:30px;
-
 }
 
 .subtitle{
-
     font-size:17px;
-
+    margin-bottom:20px;
 }
+
+.hero-btn{
+    width:100%;
+    max-width:280px;
+    text-align:center;
+}
+
+/* 공통 영역 */
 
 .section{
-
     padding:25px;
-
 }
+
+/* 제목 */
+
+.section h2{
+    font-size:21px;
+    line-height:1.4;
+    text-align:center;
+}
+
+/* 인사말 */
+
+.message-section{
+    padding:30px 22px;
+}
+
+.message-box{
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* 노동조합 소개 */
 
 .value-box{
-
     grid-template-columns:repeat(2,1fr);
-
+    gap:15px;
 }
 
+.value-card{
+    padding:20px 12px;
+}
+
+.value-card h3{
+    font-size:17px;
+}
+
+.value-card p{
+    font-size:13px;
+}
+
+/* 바로가기 */
+
 .quick-menu{
-
     grid-template-columns:repeat(3,1fr);
-
     gap:12px;
-
 }
 
 .menu-card{
-
-    padding:20px 10px;
-
+    padding:25px 12px;
 }
 
 .menu-card .icon{
-
-    font-size:30px;
-
+    font-size:34px;
 }
 
 .menu-card h3{
-
-    font-size:15px;
-
+    font-size:17px;
 }
 
 .menu-card p{
-
-    font-size:12px;
-
-}
-
-}
-
-.leader-name{
-
     font-size:13px;
+}
 
-    color:#777;
+/* 서명 */
+
+.signature{
+    text-align:center;
+    margin-top:30px;
+}
 
 }
