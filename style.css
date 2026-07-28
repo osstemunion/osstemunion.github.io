@@ -192,6 +192,11 @@ header::before{
     line-height:1.7;
 }
 
+.message-highlight span{
+    color:#9a6700;
+    font-weight:700;
+}
+
 .signature strong{
 
     color:#222;           /* 검은색 */
