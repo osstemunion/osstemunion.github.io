@@ -171,18 +171,45 @@ header::before{
 
 }
 
-    margin-top:35px;      /* 위 여백 조금 줄임 */
+.message-highlight{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#9a6700;
+
+    line-height:1.7;
+
+}
+
+.signature{
+
+    margin-top:35px;
 
     text-align:right;
 
     color:#666;
 
-    font-size:14px;       /* 전체 글씨 작게 */
+    font-size:14px;
 
     line-height:1.6;
 
 }
 
+.signature strong{
+
+    color:#222;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
 .message-highlight{
     margin-top:30px;
     text-align:center;
@@ -190,11 +217,6 @@ header::before{
     font-weight:700;
     color:#9a6700;
     line-height:1.7;
-}
-
-.message-highlight span{
-    color:#9a6700;
-    font-weight:700;
 }
 
 .signature strong{
