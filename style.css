@@ -463,6 +463,36 @@ header::before{
 
 }
 
+/* 공지사항 NEW */
+
+.notice-card{
+    position:relative;
+}
+
+.new-badge{
+
+    position:absolute;
+
+    top:-10px;
+
+    right:15px;
+
+    background:#ff4d4f;
+
+    color:white;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    box-shadow:0 4px 10px rgba(255,77,79,.35);
+
+}
+
 /* =======================
       푸터
 ======================= */
