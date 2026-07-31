@@ -826,3 +826,103 @@ Q. 상담 내용은 비밀이 보장되나요?
 ────────────────────
 
 🏠 메인으로 돌아가기
+
+/* =========================
+          FAQ
+========================= */
+
+.faq-box{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.faq-box[open]{
+
+    box-shadow:0 8px 20px rgba(0,91,170,.08);
+
+}
+
+.faq-box summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:22px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#005BAA;
+
+    position:relative;
+
+}
+
+.faq-box summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.faq-box summary::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:25px;
+
+    font-size:28px;
+
+    color:#005BAA;
+
+    transition:.3s;
+
+}
+
+.faq-box[open] summary::after{
+
+    content:"−";
+
+}
+
+.faq-box p{
+
+    padding:0 22px 22px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+.faq-box summary{
+
+    font-size:16px;
+
+    padding:18px;
+
+}
+
+.faq-box p{
+
+    font-size:15px;
+
+}
+
+}
