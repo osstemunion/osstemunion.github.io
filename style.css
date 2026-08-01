@@ -926,3 +926,11 @@ Q. 상담 내용은 비밀이 보장되나요?
 }
 
 }
+
+.organization-notice {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+    line-height: 1.7;
+    font-size: 15px;
+}
