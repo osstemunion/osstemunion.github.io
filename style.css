@@ -1092,13 +1092,14 @@ Q. 상담 내용은 비밀이 보장되나요?
 /* 부당노동행위 제보 버튼 */
 
 .report-btn {
-    background: #d6a84f !important;
-    color: white !important;
-    border-color: #d6a84f !important;
+    background: white !important;
+    color: #9a6700 !important;
+    border: 2px solid #9a6700 !important;
 }
 
 .report-btn:hover {
-    background: #c49338 !important;
+    background: #fff7e6 !important;
+    color: #7d5300 !important;
 }
 }
 }
