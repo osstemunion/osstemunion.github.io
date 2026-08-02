@@ -1,28 +1,150 @@
-<section class="section">
+<style>
+
+.notice-page {
+    background: #f7f9fc;
+    padding: 30px 20px;
+}
+
+.notice-page h2 {
+    text-align: center;
+    color: #005bac;
+    margin-bottom: 25px;
+}
+
+
+.notice-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.notice-item {
+    display: block;
+    background: white;
+    padding: 22px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+
+.notice-item:hover {
+    transform: translateY(-3px);
+}
+
+
+.notice-title {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.notice-date {
+    margin-top: 12px;
+    color: #777;
+    font-size: 14px;
+}
+
+
+.notice-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+
+.notice-red {
+    background: #d9534f;
+}
+
+
+.notice-new {
+    background: #005bac;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+
+.back {
+    text-align: center;
+    margin: 35px 0;
+}
+
+
+.back a {
+    display: inline-block;
+    background: #005bac;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+@media(max-width:600px){
+
+.notice-title {
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.notice-item {
+    padding: 18px;
+}
+
+}
+
+</style>
+
+
+
+<section class="notice-page">
+
 
 <h2>📢 공지사항</h2>
 
+
+
 <div class="notice-list">
+
+
 
 <a href="notice-001.html" class="notice-item">
 
 <div class="notice-title">
 
-<span class="notice-tag notice-red">공지</span>
+<span class="notice-tag notice-red">
+공지
+</span>
 
 노동조합 출범 안내
 
-<span class="notice-new">NEW</span>
+<span class="notice-new">
+NEW
+</span>
 
 </div>
+
 
 <div class="notice-date">
-
 2026.08.02
-
 </div>
 
+
 </a>
+
+
 
 
 
@@ -30,43 +152,61 @@
 
 <div class="notice-title">
 
-<span class="notice-tag notice-red">공지</span>
+<span class="notice-tag notice-red">
+공지
+</span>
 
 노동조합 가입 안내
 
 </div>
 
+
 <div class="notice-date">
-
 2026.08.02
-
 </div>
 
+
 </a>
+
+
+
+
+
 
 <a href="notice-003.html" class="notice-item">
 
+
 <div class="notice-title">
 
-<span class="notice-tag notice-red">공지</span>
+
+<span class="notice-tag notice-red">
+공지
+</span>
+
 
 부당노동행위 제보 안내
 
-<span class="notice-new">NEW</span>
+
+<span class="notice-new">
+NEW
+</span>
+
 
 </div>
+
 
 <div class="notice-date">
-
 2026.08.02
-
 </div>
+
 
 </a>
 
+
+
 </div>
 
-</section>
+
 
 <div class="back">
 
@@ -75,3 +215,7 @@
 </a>
 
 </div>
+
+
+
+</section>
