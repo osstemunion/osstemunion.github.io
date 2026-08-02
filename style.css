@@ -934,3 +934,157 @@ Q. 상담 내용은 비밀이 보장되나요?
     line-height: 1.7;
     font-size: 15px;
 }
+
+/* =========================
+      공지게시판
+========================= */
+
+.notice-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    margin-top:30px;
+
+}
+
+.notice-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:20px 24px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+
+.notice-item:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,91,170,.12);
+
+    border-color:#005BAA;
+
+}
+
+.notice-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#222;
+
+}
+
+.notice-date{
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+.notice-tag{
+
+    display:inline-block;
+
+    color:#fff;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+.notice-red{
+
+    background:#ef4444;
+
+}
+
+.notice-blue{
+
+    background:#2563eb;
+
+}
+
+.notice-green{
+
+    background:#16a34a;
+
+}
+
+.notice-new{
+
+    background:#ff6b6b;
+
+    color:white;
+
+    padding:3px 8px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+/* 모바일 */
+
+@media(max-width:768px){
+
+.notice-item{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+    padding:18px;
+
+}
+
+.notice-title{
+
+    font-size:16px;
+
+}
+
+.notice-date{
+
+    font-size:13px;
+
+}
+
+}
