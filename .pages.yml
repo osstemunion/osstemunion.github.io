@@ -1,0 +1,209 @@
+# Pages CMS 관리 화면 설정 (https://pagescms.org)
+# 집행부는 이 설정 덕분에 코드를 보지 않고 입력 칸만 채워 글과 자료를 올립니다.
+media:
+  input: files
+  output: /files
+
+content:
+  - name: posts
+    label: 노조소식
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    view:
+      fields: [title, category, date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: slug
+        label: 주소용 영문 이름 (예. bargaining-update)
+        type: string
+        required: true
+      - name: date
+        label: 날짜
+        type: date
+        required: true
+      - name: category
+        label: 분류
+        type: select
+        required: true
+        options:
+          values: [공지, 활동소식, 교섭소식, 성명]
+      - name: pinned
+        label: 맨 위에 고정
+        type: boolean
+      - name: body
+        label: 본문
+        type: rich-text
+
+  - name: faq
+    label: 자주 묻는 질문
+    type: file
+    path: _data/faq.yml
+    fields:
+      - name: groups
+        label: 분류
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 분류 이름
+            type: string
+          - name: items
+            label: 질문
+            type: object
+            list: true
+            fields:
+              - name: q
+                label: 질문
+                type: string
+              - name: a
+                label: 답변
+                type: text
+
+  - name: library
+    label: 자료실
+    type: file
+    path: _data/library.yml
+    fields:
+      - name: categories
+        label: 분류
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 분류 이름
+            type: string
+          - name: description
+            label: 설명
+            type: string
+          - name: items
+            label: 자료
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: 자료 이름
+                type: string
+              - name: date
+                label: 올린 날짜
+                type: date
+              - name: kind
+                label: 종류
+                type: select
+                options:
+                  values: [PDF, 한글, 이미지, 영상, 링크]
+              - name: file
+                label: 파일 올리기
+                type: file
+              - name: url
+                label: 또는 연결할 주소
+                type: string
+
+  - name: organization
+    label: 조직도
+    type: file
+    path: _data/organization.yml
+    fields:
+      - name: parent
+        label: 상급단체
+        type: string
+      - name: status
+        label: 현재 운영 안내 문구
+        type: text
+      - name: bodies
+        label: 기구
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: 기구 이름
+            type: string
+          - name: group
+            label: 구분
+            type: select
+            options:
+              values: [의결, 집행, 감사]
+          - name: who
+            label: 구성
+            type: string
+          - name: role
+            label: 하는 일
+            type: text
+      - name: officers
+        label: 임원
+        type: object
+        list: true
+        fields:
+          - name: role
+            label: 직책
+            type: string
+          - name: name
+            label: 이름
+            type: string
+          - name: duty
+            label: 하는 일
+            type: string
+
+  - name: timeline
+    label: 걸어온 길
+    type: file
+    path: _data/timeline.yml
+    fields:
+      - name: events
+        label: 일정
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: 날짜
+            type: date
+          - name: title
+            label: 내용
+            type: string
+          - name: link
+            label: 관련 링크 (영상·기사, 선택)
+            type: string
+          - name: link_label
+            label: 링크 이름 (예 영상 보기, 선택)
+            type: string
+
+  - name: links
+    label: 가입·오픈채팅 링크
+    type: file
+    path: _data/links.yml
+    fields:
+      - name: join_form
+        label: 가입 신청서
+        type: object
+        fields:
+          - { name: label, label: 이름, type: string }
+          - { name: url, label: 주소, type: string }
+      - name: report_chat
+        label: 상담·제보 오픈채팅
+        type: object
+        fields:
+          - { name: label, label: 이름, type: string }
+          - { name: url, label: 주소, type: string }
+          - { name: description, label: 설명, type: string }
+      - name: community_chat
+        label: 예비조합원 오픈채팅
+        type: object
+        fields:
+          - { name: label, label: 이름, type: string }
+          - { name: url, label: 주소, type: string }
+          - { name: description, label: 설명, type: string }
+      - name: related_sites
+        label: 함께하는 곳 (첫 화면 하단)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: 이름, type: string }
+          - { name: description, label: 설명, type: string }
+          - { name: url, label: 주소, type: string }
+          - { name: logo, label: 로고, type: image }

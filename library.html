@@ -1,0 +1,39 @@
+---
+layout: default
+title: 자료실
+nav: library
+description: 규약, 교섭 자료, 홍보물 등 지회 공개 자료
+---
+<div class="wrap page-head">
+  <h1>자료실</h1>
+  <p>조합원과 사우 누구나 볼 수 있는 공개 자료입니다.</p>
+  <nav class="subnav" aria-label="자료 분류">
+    {% for c in site.data.library.categories %}<a href="#lib-{{ forloop.index }}">{{ c.name }}</a>{% endfor %}
+  </nav>
+</div>
+
+<div class="wrap library">
+  {% for c in site.data.library.categories %}
+  <section id="lib-{{ forloop.index }}" class="lib-section">
+    <div class="lib-head">
+      <h2>{{ c.name }}</h2>
+      <p>{{ c.description }}</p>
+    </div>
+    {% if c.items.size > 0 %}
+    <ul class="files">
+      {% for f in c.items %}
+      {% if f.file %}{% assign href = f.file | relative_url %}{% elsif f.url contains '://' %}{% assign href = f.url %}{% else %}{% assign href = f.url | relative_url %}{% endif %}
+      <li{% if f.kind == '이미지' %} class="has-thumb"{% endif %}>
+        {% if f.kind == '이미지' %}<a class="file-thumb" href="{{ href }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{ href }}" alt="" loading="lazy"></a>{% endif %}
+        <span class="kind kind-{{ f.kind }}">{{ f.kind }}</span>
+        <a class="file-title" href="{{ href }}"{% if f.file or f.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ f.title }}</a>
+        <time datetime="{{ f.date }}">{{ f.date | date: '%Y.%m.%d' }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">아직 올라온 자료가 없습니다.</p>
+    {% endif %}
+  </section>
+  {% endfor %}
+</div>

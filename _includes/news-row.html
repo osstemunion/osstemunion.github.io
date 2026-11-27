@@ -1,0 +1,7 @@
+<li class="news-row" data-category="{{ post.category }}" data-date="{{ post.date | date: '%Y-%m-%d' }}">
+  <a href="{{ post.url | relative_url }}">
+    <span class="tag tag-{{ post.category }}">{{ post.category }}</span>
+    <span class="news-title">{{ post.title }}{% if post.pinned %}<span class="pin">고정</span>{% endif %}<span class="new" hidden>NEW</span></span>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+  </a>
+</li>

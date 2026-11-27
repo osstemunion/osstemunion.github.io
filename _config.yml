@@ -1,0 +1,33 @@
+# 사이트 기본 정보 — 여기만 고치면 모든 페이지에 반영됩니다.
+title: 금속노조 오스템임플란트지회
+short_title: 오스템임플란트지회
+description: 민주노총 전국금속노동조합 오스템임플란트지회 홈페이지. 노조소식, 자료실, 자주 묻는 질문, 가입과 상담 안내.
+lang: ko
+url: "https://osstemunion.github.io"
+baseurl: ""
+
+# 노조소식 글 주소 형식: /news/2026-08-02-founding.html
+permalink: /news/:year-:month-:day-:title.html
+timezone: Asia/Seoul
+
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: news
+
+# 노조소식 분류 (관리 화면 선택지와 같게 유지)
+categories_list: [공지, 활동소식, 교섭소식, 성명]
+
+# 최신 소식에 NEW 표시를 붙이는 기간(일)
+new_badge_days: 14
+
+exclude:
+  - README.md
+  - 관리안내.md
+  - .pages.yml
+  - tools/

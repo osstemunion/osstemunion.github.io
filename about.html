@@ -1,0 +1,91 @@
+---
+layout: default
+title: 노조소개
+nav: about
+description: 금속노조 오스템임플란트지회 인사말, 설립선언, 조직도, 연혁
+---
+<div class="wrap page-head">
+  <h1>노조소개</h1>
+  <p>오스템임플란트 노동자가 직접 만든 노동조합입니다.</p>
+  <nav class="subnav" aria-label="노조소개 안의 메뉴">
+    <a href="#greeting">인사말</a>
+    <a href="#declaration">설립선언</a>
+    <a href="#organization">조직도</a>
+    <a href="#history">걸어온 길</a>
+  </nav>
+</div>
+
+<div class="wrap about">
+  <section id="greeting" class="about-section">
+    <h2>사우 여러분께 드리는 말씀</h2>
+    <div class="prose">
+      <p>드디어 우리 회사에도 노동조합이 설립되었습니다.</p>
+      <p>노동조합은 조합원의 권익을 보호하고, 더 나은 근무환경과 건강한 조직문화를 함께 만들어가기 위한 시작입니다. 여러분 한 분 한 분의 관심과 참여가 더 큰 변화를 만듭니다.</p>
+      <p>오스템임플란트지회는 민주노총 전국금속노동조합과 함께 조합원의 권익을 지키고 모두가 존중받는 일터를 만들기 위해 최선을 다하겠습니다.</p>
+    </div>
+
+    <figure class="quote">
+      <blockquote>
+        <p>혼자라면 자신감도 없고 외로울 수 있습니다. 하지만 함께하면 변화가 시작된다는 것을 경험했거나, 경험하고 싶은 노동자들이 금속노조에 함께하고 있습니다. 금속노조에 가입해서 함께 오스템임플란트를 바꿔봅시다.</p>
+      </blockquote>
+      <figcaption>김태을, 민주노총 금속노조 서울지부장</figcaption>
+    </figure>
+  </section>
+
+  <section id="declaration" class="about-section">
+    <h2>설립선언</h2>
+    <p class="lead">2026년 8월 3일, 우리는 네 가지를 약속하며 노동조합의 깃발을 올렸습니다.</p>
+    <ol class="pledges">
+      <li><strong>고용 안정을 최우선으로 확보한다.</strong>인위적 구조조정을 막고, 매각 시 근로조건 승계를 명문화합니다.</li>
+      <li><strong>성과에 대한 공정한 배분을 쟁취한다.</strong>투명하고 합리적인 임금·성과급 기준을 세웁니다.</li>
+      <li><strong>민주적이고 투명하게 조직을 운영한다.</strong>조합원의 참여로 결정하고 재정과 활동을 공개합니다.</li>
+      <li><strong>직군 간 차별을 넘어 연대한다.</strong>제조, 영업, 연구, 사무 모든 직군이 함께 성장합니다.</li>
+    </ol>
+    <a class="text-link" href="{{ '/news/2026-08-02-founding.html' | relative_url }}">설립선언문 전문 읽기</a>
+  </section>
+
+  <section id="organization" class="about-section">
+    <h2>조직도</h2>
+    <p class="org-parent">상급단체 <strong>{{ site.data.organization.parent }}</strong></p>
+    <p class="org-status"><strong>지금은</strong>{{ site.data.organization.status }}</p>
+
+    <div class="org-groups">
+      {% assign groups = "의결|집행|감사" | split: "|" %}
+      {% for g in groups %}
+      <div class="org-group org-{{ g }}">
+        <h3>{% if g == "의결" %}결정하는 곳{% elsif g == "집행" %}실행하는 곳{% else %}점검하는 곳{% endif %}</h3>
+        <ol class="org-bodies">
+          {% for b in site.data.organization.bodies %}{% if b.group == g %}
+          <li>
+            <strong>{{ b.name }}</strong>
+            <span class="org-who">{{ b.who }}</span>
+            <span class="org-role">{{ b.role }}</span>
+          </li>
+          {% endif %}{% endfor %}
+        </ol>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3 class="officers-title">임원</h3>
+    <ul class="officers">
+      {% for o in site.data.organization.officers %}
+      <li>
+        <span class="officer-role">{{ o.role }}</span>
+        <span class="officer-name">{{ o.name }}</span>
+        <span class="officer-duty">{{ o.duty }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="note">임원과 기구는 <a href="{{ '/files/osstem-jihoe-rules.pdf' | relative_url }}" target="_blank" rel="noopener">지회 규칙</a>(2026년 8월 25일 설립총회 제정)에 따라 구성합니다.</p>
+  </section>
+
+  <section id="history" class="about-section">
+    <h2>걸어온 길</h2>
+    <ol class="timeline">
+      {% for e in site.data.timeline.events reversed %}
+      <li><time datetime="{{ e.date }}">{{ e.date | date: '%Y.%m.%d' }}</time><span>{{ e.title }}{% if e.link %}{% if e.link contains '://' %}{% assign tl = e.link %}{% else %}{% assign tl = e.link | relative_url %}{% endif %} <a class="timeline-link" href="{{ tl }}" target="_blank" rel="noopener">{{ e.link_label | default: '자세히 보기' }}</a>{% endif %}</span></li>
+      {% endfor %}
+    </ol>
+  </section>
+</div>

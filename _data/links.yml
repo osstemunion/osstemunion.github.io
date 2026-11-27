@@ -1,0 +1,21 @@
+# 외부 링크 — 주소가 바뀌면 여기 한 곳만 고치세요.
+join_form:
+  label: 노조 가입 신청서
+  url: https://forms.gle/TJK4JSsXZH3oiDjZA
+
+report_chat:
+  label: 상담·제보 오픈채팅
+  url: https://open.kakao.com/o/s6Eyf6Fi
+  description: 부당노동행위, 직장 내 괴롭힘, 인사·임금 고민을 집행부에 직접 알리는 창구입니다.
+
+community_chat:
+  label: 예비조합원 오픈채팅
+  url: https://open.kakao.com/o/gdAEdNCi
+  description: 가입을 고민하는 사우와 예비조합원이 노조 소식을 먼저 받아보고 의견을 나누는 단체 대화방입니다.
+
+# 첫 화면 하단 '함께하는 곳' — 다른 단체 사이트를 추가하려면 아래 형식으로 한 줄씩 늘리세요.
+related_sites:
+  - name: 전국금속노동조합
+    description: 상급단체인 금속노조 공식 홈페이지
+    url: https://kmwu.kr
+    logo: /images/logos/kmwu.png

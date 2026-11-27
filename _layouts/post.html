@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="wrap article">
+  <p class="crumb"><a href="{{ '/news.html' | relative_url }}">노조소식</a></p>
+  <header class="article-head">
+    <span class="tag tag-{{ page.category }}">{{ page.category }}</span>
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y년 %-m월 %-d일' }}</time>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <aside class="article-help">
+    <p>궁금한 점이나 제보할 내용이 있으면 상담·제보 오픈채팅으로 알려주세요.</p>
+    <a class="btn btn-line" href="{{ site.data.links.report_chat.url }}" target="_blank" rel="noopener">상담·제보하기</a>
+  </aside>
+  <nav class="article-nav" aria-label="다른 소식">
+    {% if page.next %}<a class="older" href="{{ page.next.url | relative_url }}"><small>다음 글</small>{{ page.next.title }}</a>{% endif %}
+    {% if page.previous %}<a class="newer" href="{{ page.previous.url | relative_url }}"><small>이전 글</small>{{ page.previous.title }}</a>{% endif %}
+    <a class="to-list" href="{{ '/news.html' | relative_url }}">목록으로</a>
+  </nav>
+</article>

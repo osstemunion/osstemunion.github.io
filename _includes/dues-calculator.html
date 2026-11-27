@@ -1,0 +1,41 @@
+<div class="dues" id="dues-calculator">
+  <h3>내 조합비 계산하기</h3>
+  <p class="dues-formula"><strong>월 조합비</strong> = (월 기본급 + 매월 받는 고정수당 합계 + 연간 상여 ÷ 12) × 1%</p>
+
+  <form class="dues-form" novalidate>
+    <label>월 기본급 <small>매달 받는 기본급</small>
+      <span class="dues-input"><input name="base" inputmode="numeric" autocomplete="off" placeholder="0"><span>원</span></span>
+    </label>
+    <label>매월 받는 고정수당 합계 <small>직책·자격수당, 식대 등 매달 같은 금액</small>
+      <span class="dues-input"><input name="allow" inputmode="numeric" autocomplete="off" placeholder="0"><span>원</span></span>
+    </label>
+    <label>연간 상여 합계 <small>1년 동안 정기적으로 받는 상여 전체</small>
+      <span class="dues-input"><input name="bonus" inputmode="numeric" autocomplete="off" placeholder="0"><span>원</span></span>
+    </label>
+  </form>
+
+  <div class="dues-result" aria-live="polite">
+    <p>월 통상임금 <output id="dues-wage">0원</output></p>
+    <p class="dues-total">월 조합비 <output id="dues-fee">0원</output></p>
+  </div>
+
+  <details class="dues-example" open>
+    <summary>계산 예시</summary>
+    <table>
+      <tbody>
+        <tr><th scope="row">월 기본급</th><td>2,800,000원</td></tr>
+        <tr><th scope="row">월 고정수당 합계</th><td>200,000원</td></tr>
+        <tr><th scope="row">연간 상여 4,800,000원 ÷ 12</th><td>400,000원</td></tr>
+        <tr><th scope="row">월 통상임금 합계</th><td>3,400,000원</td></tr>
+        <tr class="sum"><th scope="row">월 조합비 (1%)</th><td>34,000원</td></tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-line dues-fill">예시 금액 넣어 보기</button>
+  </details>
+
+  <ul class="dues-notes">
+    <li>1원 단위는 버립니다. (예: 32,567원 → 32,560원)</li>
+    <li>휴직 기간의 조합비는 월 3,000원입니다.</li>
+    <li>입력한 금액은 저장되거나 전송되지 않고, 이 화면에서만 계산됩니다.</li>
+  </ul>
+</div>

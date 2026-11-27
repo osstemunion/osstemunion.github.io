@@ -1,0 +1,90 @@
+# 자료실 — 분류(categories) 안에 자료(items)를 추가하세요.
+#   title: 자료 이름
+#   date: 올린 날짜 (2026-11-19 형식)
+#   kind: PDF, 한글, 이미지, 영상, 링크 중 하나
+#   file: 관리 화면에서 올린 파일 경로 (예: /files/단협요구안.pdf)
+#   url: 파일 대신 다른 주소로 연결할 때
+categories:
+  - name: 홍보물
+    description: 동료에게 공유하기 좋은 영상, 카드뉴스, 활동 사진
+    items:
+      - title: 민주노총 카드뉴스 - 사모펀드의 먹튀와 약탈, 규제하는 입법 캠페인 온라인 서명
+        date: 2026-11-10
+        kind: 링크
+        url: https://nodong.org/paper/7951597
+      - title: 국회 기자회견 지회 대의원 발언 영상 (사모펀드 규제 촉구)
+        date: 2026-10-26
+        kind: 영상
+        url: https://www.youtube.com/watch?v=nqNUV7BeolM&t=769s
+      - title: 사모펀드 MBK 책임과 홈플러스 정상화 국회토론회 영상 (쇼츠)
+        date: 2026-09-18
+        kind: 영상
+        url: https://youtube.com/shorts/cA7PiDD58kA
+      - title: 노동조합 소개 영상
+        date: 2026-08-02
+        kind: 영상
+        file: /videos/union-intro.mp4
+      - title: 부당노동행위 안내 카드 1
+        date: 2026-08-02
+        kind: 이미지
+        file: /images/unfair01.png
+      - title: 부당노동행위 안내 카드 2
+        date: 2026-08-02
+        kind: 이미지
+        file: /images/unfair02.png
+      - title: 부산공장 출근 선전전 (11.20)
+        date: 2026-11-20
+        kind: 이미지
+        file: /images/activity/2026-11-20-busan-picket.jpg
+      - title: 부산공장 출근 선전전 (11.12)
+        date: 2026-11-12
+        kind: 이미지
+        file: /images/activity/2026-11-12-busan-picket.jpg
+      - title: 부산 생산본부 현수막 게시 (11.3)
+        date: 2026-11-03
+        kind: 이미지
+        file: /images/activity/2026-11-03-busan-banner.jpg
+      - title: 부산공장 출근 선전전 (10.22)
+        date: 2026-10-22
+        kind: 이미지
+        file: /images/activity/2026-10-22-busan-picket.jpg
+      - title: 부산공장 출근 선전전, 설립 환영 현수막 (9.3)
+        date: 2026-09-03
+        kind: 이미지
+        file: /images/activity/2026-09-03-busan-banner.jpg
+      - title: 설립총회 현장 (8.25)
+        date: 2026-08-25
+        kind: 이미지
+        file: /images/activity/2026-08-25-general-meeting.jpg
+      - title: 설립총회장 앞 현수막 '임플란트는 오스템, 노동조합은 금속노조' (8.25)
+        date: 2026-08-25
+        kind: 이미지
+        file: /images/activity/2026-08-25-general-meeting-banner.jpg
+
+  - name: 규약·조직
+    description: 지회 규칙, 금속노조 규약, 조직 구성
+    items:
+      - title: 오스템임플란트지회 규칙 (2026.8.25 설립총회 제정)
+        date: 2026-08-25
+        kind: PDF
+        file: /files/osstem-jihoe-rules.pdf
+
+  - name: 교섭·단체협약
+    description: 단체교섭 요구안, 교섭 경과, 체결된 협약
+    items: []
+
+  - name: 임금·제도
+    description: 취업규칙, 임금체계, 제도 분석 자료
+    items: []
+
+  - name: 성명·대외문서
+    description: 성명서, 기자회견문, 공문
+    items:
+      - title: 금속노조 오스템임플란트지회 설립선언문
+        date: 2026-08-03
+        kind: 링크
+        url: /news/2026-08-02-founding.html
+
+  - name: 서식
+    description: 가입, 탈퇴, 각종 신청서 양식
+    items: []
